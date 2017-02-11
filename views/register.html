@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="iScout">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <script src="javascripts/angular.min.js"></script>
+    <script src="javascripts/app.js"></script>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+    	<div class="login-container" ng-controller = "RegisterController">
+          <div id="output"></div>
+          <img src="images/Scout_Logo.svg" class = "lis" >
+          <!--img class="avatar"></img-->
+          <div class="form-box" ng-hide="sent">
+              <form action="" method="post">
+
+                  <input name="nombre" type="text" placeholder="Nombre" required ng-model = "user.name">
+                  <input name="apellido1" type="text" placeholder="Primer Apellido" required ng-model = "user.lastname1">
+                  <input name="apellido2" type="text" placeholder="Segundo Apellido" ng-model = "user.lastname2">
+                  <input name="nacimiento" type="text" placeholder="Fecha de Nacimiento" required onfocus="(this.type='date')" onblur="(this.type='text')" ng-model = "user.birthdate">
+
+                  <select name="rol" required ng-model = "user.rol">
+                      <option value="" disabled selected>Tu papel en el grupo</option>
+                      <option value="castor">Castor</option>
+                      <option value="lobato">Lobato</option>
+                      <option value="tropero">Tropero</option>
+                      <option value="pionero">Pionero</option>
+                      <option value="ruta">Ruta</option>
+                      <option value="jefe">Jefe</option>
+                      <option value="antiguo">Antiguo Miembro del Grupo</option>
+                      <option value="colaborador">Colaborador</option>
+                  </select>
+
+                  <input name="email" type="email" placeholder="Dirección de correo electrónico" required ng-model = "user.email">
+
+                  <div class = "register-link">
+                      <a href="/login">¿Ya estás registrado?</a><br/>
+                  </div>
+                  <button class="btn btn-info btn-block login" type="submit" ng-click="something();">Enviar</button>
+              </form>
+          </div>
+          <div class="form-box" ng-hide = "!sent">
+            <p>
+              Genial! <br/>
+              Estamos procesando los datos que nos has enviado:<br/><br/><br/>
+
+              Nombre: {{user.name}} <br/>
+              Apellidos: {{user.lastname1}} {{user.lastname2}}<br/>
+              Fecha de nacimiento: {{user.birthdate}}<br/>
+              Papel en el grupo: {{user.rol}}<br/>
+              Email: {{user.email}}<br/><br/><br/>
+
+              Mientras que comprobamos tus datos puedes:<br/><br/>
+
+            </p>
+
+            <button class="btn btn-info btn-block login" type="submit" >Volver a la página principal del grupo</button>
+            <button class="btn btn-info btn-block login" type="submit" >Entrar como invitado</button>
+
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
