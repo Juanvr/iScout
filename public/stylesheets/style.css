@@ -1,8 +1,11 @@
 
-body{background: #eee url(http://subtlepatterns.com/patterns/sativa.png);}
+/*body{background: #eee url(http://subtlepatterns.com/patterns/sativa.png);}*/
+body{background: url("../images/140510_SalidadePadres1.jpg") no-repeat center center fixed;
+}
 html,body{
    position: relative;
-   height: 100%;
+   width: 100%;
+   height: auto;
 }
 
 .login-container{
@@ -121,7 +124,7 @@ html,body{
    background: #eee;
 }
 
-.form-box input[name="nombre"]{
+.form-box input[name="name"]{
    border-radius: 5px 5px 0 0;
    border: 1px solid #ccc;
 }

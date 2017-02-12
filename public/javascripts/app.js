@@ -11,7 +11,7 @@ function RegisterController($scope, $http){
   $scope.sent = false;
 
   $scope.something = function() {
-    if($scope.user.name && $scope.user.lastname1 && $scope.user.birthdate && $scope.user.rol && $scope.user.email){
+    if($scope.user.name && $scope.user.lastname1 && $scope.user.birthdate && $scope.user.role && $scope.user.email){
       $scope.sent = true;
     };
   };
