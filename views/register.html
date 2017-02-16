@@ -16,21 +16,21 @@
           <div class="form-box" ng-hide="sent">
               <form action="" method="post">
 
-                  <input name="nombre" type="text" placeholder="Nombre" required ng-model = "user.name">
-                  <input name="apellido1" type="text" placeholder="Primer Apellido" required ng-model = "user.lastname1">
-                  <input name="apellido2" type="text" placeholder="Segundo Apellido" ng-model = "user.lastname2">
-                  <input name="nacimiento" type="text" placeholder="Fecha de Nacimiento" required onfocus="(this.type='date')" onblur="(this.type='text')" ng-model = "user.birthdate">
+                  <input name="name" type="text" placeholder="Nombre" required ng-model = "user.name">
+                  <input name="lastname1" type="text" placeholder="Primer Apellido" required ng-model = "user.lastname1">
+                  <input name="lastname2" type="text" placeholder="Segundo Apellido" ng-model = "user.lastname2">
+                  <input name="birthdate" type="text" placeholder="Fecha de Nacimiento" required onfocus="(this.type='date')" onblur="(this.type='text')" ng-model = "user.birthdate">
 
-                  <select name="rol" required ng-model = "user.rol">
+                  <select name="role" required ng-model = "user.role">
                       <option value="" disabled selected>Tu papel en el grupo</option>
-                      <option value="castor">Castor</option>
-                      <option value="lobato">Lobato</option>
-                      <option value="tropero">Tropero</option>
-                      <option value="pionero">Pionero</option>
-                      <option value="ruta">Ruta</option>
-                      <option value="jefe">Jefe</option>
-                      <option value="antiguo">Antiguo Miembro del Grupo</option>
-                      <option value="colaborador">Colaborador</option>
+                      <option value="Castor">Castor</option>
+                      <option value="Lobato">Lobato</option>
+                      <option value="Tropero">Tropero</option>
+                      <option value="Pionero">Pionero</option>
+                      <option value="Ruta">Ruta</option>
+                      <option value="Jefe">Jefe</option>
+                      <option value="Antiguo">Antiguo Miembro del Grupo</option>
+                      <option value="Colaborador">Colaborador</option>
                   </select>
 
                   <input name="email" type="email" placeholder="Dirección de correo electrónico" required ng-model = "user.email">
@@ -49,15 +49,15 @@
               Nombre: {{user.name}} <br/>
               Apellidos: {{user.lastname1}} {{user.lastname2}}<br/>
               Fecha de nacimiento: {{user.birthdate}}<br/>
-              Papel en el grupo: {{user.rol}}<br/>
+              Papel en el grupo: {{user.role}}<br/>
               Email: {{user.email}}<br/><br/><br/>
 
               Mientras que comprobamos tus datos puedes:<br/><br/>
 
             </p>
 
-            <button class="btn btn-info btn-block login" type="submit" >Volver a la página principal del grupo</button>
-            <button class="btn btn-info btn-block login" type="submit" >Entrar como invitado</button>
+            <button class="btn btn-info btn-block login" >Volver a la página principal del grupo</button>
+            <button class="btn btn-info btn-block login" >Entrar como invitado</button>
 
           </div>
       </div>

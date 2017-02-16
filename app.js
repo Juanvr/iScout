@@ -16,7 +16,6 @@ var users = require('./routes/users');
 var setup = require('./routes/setup');
 var api = require('./routes/api');
 
-
 var app = express();
 
 // view engine setup
@@ -37,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // configuration =========
 // =======================
 var port = process.env.PORT || 3000; // used to create, sign, and verify tokens
+
 mongoose.connect(config.database); // connect to database
 // app.set('superSecret', config.secret); // secret variable
 
@@ -46,7 +46,6 @@ app.use(bodyParser.json());
 
 // use morgan to log requests to the console
 app.use(logger('dev'));
-
 ///////////////////////////
 // =======================
 // routes ================
